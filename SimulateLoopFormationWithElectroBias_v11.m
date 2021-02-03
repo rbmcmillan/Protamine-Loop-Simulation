@@ -35,7 +35,7 @@ pixelSize = 3.9;
 binSize = 3*pixelSize/N;
 
 % Set bins for histogram
-edges = [0:binSize:0.5];
+edges = 0:binSize:0.5;
 
 %initialize rng
 rng('default')
@@ -78,7 +78,7 @@ for i=1:t
     %if endPos is off of the molecule, then we say that the start site is
     %0.
     distToRightEnd = N - rightEnd;
-    if(leftEnd < 1 | rightEnd > N)
+    if(leftEnd < 1 || rightEnd > N)
         startSites(i) = 0;
 %         startSites(i);
 %         input('Push enter');
@@ -100,7 +100,7 @@ end
 startSites = startSites';
 %make the histogram
 figure('Name', ['DNA Loop Start Site Simulation with ' num2str(N) ' segments' ])
-startSitesHist = histogram(startSites, edges); 
+histogram(startSites, edges); 
 xlabel('Normalized Loop Start Site')
 ylabel('N')
 title(['DNA Loop Start Site Simulation with ' num2str(N) ' segments' ])
