@@ -3,10 +3,10 @@ This is MATLAB software to accompany the article "DNA looping by protamine follo
 sampleDist is a helper method that carries out the rejection sampling used in SimulateMultipleProtBinding_v6. This
 file was authored by Dmitri Savransky. All attribution for this function should be given to him.
 
-SimulateLoopFormation_v3gamma carries out the random looping model. See the comments at the top of the file for 
+SimulateRandomLoopFormation carries out the random looping model. See the comments at the top of the file for 
 instructions on how to run the simulation.
 
-SimulateLoopFormationWithElectroBias_v11 can simulate both the electrostatic binding and electrostatic multibinding
+SimulateLoopFormation_MultielectrostaticBinding can simulate both the electrostatic binding and electrostatic multibinding
 simulations. See comments at the top of the file for instructions on how to run the simulation. This function calls 
 SimulateMultipleProtBinding_v6
 
